@@ -7,6 +7,10 @@ describe('Package sort function', () => {
     expect(() => sort(1,0,1,1)).to.throw('Invalid input into sort() function')
     expect(() => sort(1,1,0,1)).to.throw('Invalid input into sort() function')
     expect(() => sort(1,1,1,0)).to.throw('Invalid input into sort() function')
+    expect(() => sort(-1,1,1,1)).to.throw('Invalid input into sort() function')
+    expect(() => sort(1,-1,1,1)).to.throw('Invalid input into sort() function')
+    expect(() => sort(1,1,-1,1)).to.throw('Invalid input into sort() function')
+    expect(() => sort(1,1,1,-1)).to.throw('Invalid input into sort() function')
   })
 
   it('should return "STANDARD" for standard packages', () => {
